@@ -41,15 +41,30 @@ header nav {
   text-decoration: none;
 }
 
-.active::after {
+.nav-links::after {
   content: "";
+  display: block;
+  position: absolute;
+  opacity: 0;
+  width: 0vw;
+  height: 5px;
+  left: calc(5vw - 1.25vw);
+  background-color: #170506;
+  border-radius: 100000000px;
+  transition: .5s;
+}
+
+.active::after {
+  /* content: "";
   display: block;
   position: absolute;
   width: 2.5vw;
   height: 5px;
   left: calc(5vw - 1.25vw);
   background-color: #170506;
-  border-radius: 100000000px;
+  border-radius: 100000000px; */
+  opacity: 1;
+  width: 2.5vw;
 }
 
 #music-toggle {
