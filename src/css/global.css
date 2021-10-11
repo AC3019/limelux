@@ -13,11 +13,14 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #eee;
+  transition: .25s;
 }
 
 .header-scrolled {
+  position: -webkit-sticky; /* include support for safari*/
+  position: sticky;
+  top: 1vw;
   margin: 1vw;
-  /* border: 3px solid #590d13; */
   box-shadow: 0px 4px 10px #1705067a;
   border-radius: 5px;
 }
