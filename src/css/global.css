@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  color: #5c0a11;
+}
+
+header {
+  height: 5vh;
+  padding: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+}
+
+.header-scrolled {
+  margin: 1vw;
+  /* border: 3px solid #590d13; */
+  box-shadow: 0px 4px 10px #1705067a;
+  border-radius: 5px;
+}
+
+header h1 {
+  margin-left: 1vw;
+  color: #fc6471;
+}
+
+header nav {
+  /* margin-right: 1vw; */
+  display: flex;
+  /* width: 30vw; */
+}
+
+.nav-links {
+  text-align: center;
+  display: block;
+  width: 10vw;
+}
+
+#music-toggle {
+  background-image: url(../../res/music-on.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  cursor: pointer;
+}
+
+.music-on {
+  background-image: url(../../res/music-on.png);
+}
+
+.music-off {
+  background-image: url(../../res/music-off.png);
+}
