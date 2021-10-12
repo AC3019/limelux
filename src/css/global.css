@@ -1,8 +1,9 @@
+/* RMB TO IMPORT TO EVERY HTML FILE*/
 * {
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
-  color: #5c0a11;
+  color: #170506;
 }
 
 header {
@@ -12,11 +13,14 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #eee;
+  transition: .25s;
 }
 
 .header-scrolled {
+  position: -webkit-sticky; /* include support for safari*/
+  position: sticky;
+  top: 1vw;
   margin: 1vw;
-  /* border: 3px solid #590d13; */
   box-shadow: 0px 4px 10px #1705067a;
   border-radius: 5px;
 }
@@ -36,6 +40,34 @@ header nav {
   text-align: center;
   display: block;
   width: 10vw;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-links::after {
+  content: "";
+  display: block;
+  position: absolute;
+  opacity: 0;
+  width: 0vw;
+  height: 5px;
+  left: calc(5vw - 1.25vw);
+  background-color: #170506;
+  border-radius: 100000000px;
+  transition: .5s;
+}
+
+.active::after {
+  /* content: "";
+  display: block;
+  position: absolute;
+  width: 2.5vw;
+  height: 5px;
+  left: calc(5vw - 1.25vw);
+  background-color: #170506;
+  border-radius: 100000000px; */
+  opacity: 1;
+  width: 2.5vw;
 }
 
 #music-toggle {
