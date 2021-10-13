@@ -1,4 +1,9 @@
-/* RMB TO IMPORT TO EVERY HTML FILE*/
+/* 
+This file provides stylings to the elements that all page will have in common
+like headers and footers
+RMB TO IMPORT TO EVERY HTML FILE
+DONT CODE PAGE SPECIFIC STYLES HERE 
+*/
 * {
   margin: 0;
   padding: 0;
@@ -71,17 +76,28 @@ header nav {
 }
 
 #music-toggle {
-  background-image: url(../../res/music-on.png);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   width: 24px;
   cursor: pointer;
 }
 
 .music-on {
   background-image: url(../../res/music-on.png);
+  animation: music-disk-rotation 3s infinite linear;
 }
 
 .music-off {
   background-image: url(../../res/music-off.png);
+}
+
+@keyframes music-disk-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
 }

@@ -10,16 +10,32 @@
   <title>Limelux Home</title>
 </head>
 <body>
-  <!-- This file is supposed to be the landing page and the template for all other pages-->
+  <!-- 
+    This file is supposed to be the landing page and the template for all other pages
+    DO NOT CHANGE ANYTHING BESIDES THE CONTENTS INSIDE <main>
+  -->
+
+  <!-- 
+    seems like autoplay property doesnt work very well,
+    users will need to be pressing the music icon on top right corner to play the bgm
+  -->
+  <audio autoplay loop id="bgm">
+    <source src="../../res/yumenokissaten.mp3">
+  </audio>
   <header>
     <h1>LimeLux</h1>
     <nav>
       <!-- An exception: change the active to where the user at -->
-      <a href="#" class="nav-links active">Home</a>
+      <a href="index.html" class="nav-links active">Home</a>
       <a href="#" class="nav-links">Our Products</a>
       <a href="#" class="nav-links">About Us</a>
       <a href="#" class="nav-links">Contact Us</a>
-      <a id="music-toggle" class="music-on" title="Toggle Background Music"></a> 
+      <a 
+        id="music-toggle" 
+        class="music-off" 
+        title="Toggle Background Music"
+        onclick="toggleMusic()"
+      ></a> 
     </nav>
   </header>
   <main>
