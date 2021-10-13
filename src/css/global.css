@@ -71,17 +71,28 @@ header nav {
 }
 
 #music-toggle {
-  background-image: url(../../res/music-on.png);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   width: 24px;
   cursor: pointer;
 }
 
 .music-on {
   background-image: url(../../res/music-on.png);
+  animation: music-disk-rotation 3s infinite linear;
 }
 
 .music-off {
   background-image: url(../../res/music-off.png);
+}
+
+@keyframes music-disk-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
 }

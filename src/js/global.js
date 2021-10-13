@@ -1,8 +1,8 @@
 /*
-  Apply the "shrink and float header bar"
-    - make the window listen for onscroll function
-    - check the scroll on body and the documentElement AKA html itself
-    - if the scrollTop is big, apply the header-scrolled class
+Apply the "shrink and float header bar"
+- make the window listen for onscroll function
+- check the scroll on body and the documentElement AKA html itself
+- if the scrollTop is big, apply the header-scrolled class
 */
 
 window.onscroll = () => {
@@ -36,3 +36,27 @@ navLinks.forEach(link => {
     event.target.classList.remove('active')
   })
 })
+
+// to remember if the bgm is playing
+// we are gonna have videos soon or later
+// so we plan let this be a global variable that spans across multiple files
+// it will store which media player is playing at the moment
+// so when the other media player is played, the current playing media player will be paused
+let currentMediaPlayer = undefined
+
+// toggle background music function
+function toggleMusic() {
+  const bgmElem = document.getElementById('bgm')
+  const musicToggler = document.getElementById('music-toggle')
+  if (currentMediaPlayer != bgmElem) {
+    bgmElem.play()
+    musicToggler.classList.add('music-on')
+    musicToggler.classList.remove('music-off')
+    currentMediaPlayer = bgmElem
+  } else {
+    bgmElem.pause()
+    musicToggler.classList.add('music-off')
+    musicToggler.classList.remove('music-on')
+    currentMediaPlayer = undefined
+  }
+}
