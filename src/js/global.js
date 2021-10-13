@@ -55,12 +55,16 @@ function toggleMusic() {
   const bgmElem = document.getElementById('bgm')
   const musicToggler = document.getElementById('music-toggle')
   if (currentMediaPlayer != bgmElem) {
+    if (currentMediaPlayer) {
+      // pause the current media player if it exists
+      currentMediaPlayer.pause()
+    }
     bgmElem.play()
     musicToggler.classList.add('music-on')
     musicToggler.classList.remove('music-off')
     currentMediaPlayer = bgmElem
   } else {
-    bgmElem.pause()
+    currentMediaPlayer.pause()
     musicToggler.classList.add('music-off')
     musicToggler.classList.remove('music-on')
     currentMediaPlayer = undefined
