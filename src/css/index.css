@@ -1,4 +1,74 @@
 /* This css is specifically for index.html */
-.container {
-  height: 120vh;
+.land-container {
+  height: calc(95vh - 2vw); /* Header is 5vh, with top and bottom 1vw padding each*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffeddf;
+}
+
+/* Move everything in the land-container but not the container itself up abit */
+.land-container * {
+  transform: translateY(-40%);
+}
+
+/* 
+Urge buttons have to follow a template of <button><span></span></button>
+*/
+.urge-action-btn {
+  width: 15vw;
+  height: 8vh;
+  margin-top: 5vh;
+  /* padding: 10px; */
+  background-color: #d47d84;
+  border: 2px solid #862d34;
+  border-radius: 7.5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.urge-action-btn span {
+  position: relative;
+  transition: .25s;
+}
+
+.urge-action-btn span::after {
+  content: ">>";
+  position: absolute;
+  opacity: 0;
+  right: -15px; /* to make a little bit slide-in effect */
+  transition: .25s;
+}
+
+.urge-action-btn:hover {
+  box-shadow: 0px 2px 7px #3b2729;
+}
+
+.urge-action-btn:hover span {
+  padding-right: 20px;
+}
+
+.urge-action-btn:hover span::after {
+  opacity: 1;
+  right: -10px;
+  animation: .75s slide-right linear alternate infinite;
+}
+
+.urge-action-btn:active {
+  box-shadow: 0px 2px 2px #3b2729;
+}
+
+@keyframes slide-right {
+  from {
+    opacity: .25;
+    right: -3px;
+  }
+
+  to {
+    opacity: 1;
+    right: -10px;
+  }
 }
