@@ -45,6 +45,7 @@ header nav {
   text-align: center;
   display: block;
   width: 10vw;
+  padding: 10px 0px;
   position: relative;
   text-decoration: none;
 }
@@ -100,4 +101,10 @@ header nav {
   to {
     transform: rotate(359deg);
   }
+}
+
+footer {
+  height: 10vh; /* To be determined, when we know what actually goes in there */
+  /* Also to be determined, prob will be removed as we'll be using elements and not sole text*/
+  text-align: center;
 }

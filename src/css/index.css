@@ -54,7 +54,7 @@ Urge buttons have to follow a template of <button><span></span></button>
 .urge-action-btn:hover span::after {
   opacity: 1;
   right: -10px;
-  animation: .75s slide-right linear alternate infinite;
+  animation: .5s slide-right linear alternate infinite;
 }
 
 .urge-action-btn:active {
