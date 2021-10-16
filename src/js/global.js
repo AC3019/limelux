@@ -12,7 +12,7 @@ Apply the "shrink and float header bar"
 */
 
 window.onscroll = () => {
-  if (document.body.scrollTop >= 60 || document.documentElement.scrollTop >= 60) {
+  if (document.body.scrollTop >= 40 || document.documentElement.scrollTop >= 40) {
     document.getElementsByTagName('header')[0].classList.add('header-scrolled')
   } else {
     // if the scroll is not that big then the class shall be removed
