@@ -19,6 +19,7 @@ header {
   align-items: center;
   background-color: #eee;
   transition: .25s;
+  z-index: 20; /* Give a big value so that all other elements go behind */
 }
 
 .header-scrolled {
