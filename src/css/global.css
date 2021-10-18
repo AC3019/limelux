@@ -94,6 +94,32 @@ header nav {
   background-image: url(../../res/music-off.png);
 }
 
+#goToTop {
+  width: 5vw;
+  height: 5vw;
+  display: none; /* Only visible after the user has scrolled the page (using js) */
+  border: none;
+  box-shadow: 1px 1px 5px #3b2729;
+  border-radius: 50%;
+  background-image: url(../../res/arrowUp.png);
+  background-size: 3vw 3vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  bottom: 5vh;
+  right: 3vw;
+  transition: .3s;
+  z-index: 30; /*go on top everything else */
+}
+
+#goToTop:hover {
+  box-shadow: 1px 3px 5px #3b2729;
+}
+
+#goToTop:active {
+  box-shadow: 1px 1px 5px #3b2729;
+}
+
 @keyframes music-disk-rotation {
   from {
     transform: rotate(0deg);

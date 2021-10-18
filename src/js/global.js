@@ -9,14 +9,17 @@ Apply the "shrink and float header bar"
 - make the window listen for onscroll function
 - check the scroll on body and the documentElement AKA html itself
 - if the scrollTop is big, apply the header-scrolled class
+- AND make the scroll to top button visible
 */
 
 window.onscroll = () => {
   if (document.body.scrollTop >= 40 || document.documentElement.scrollTop >= 40) {
     document.getElementsByTagName('header')[0].classList.add('header-scrolled')
+    document.getElementById('goToTop').style.display = 'block'
   } else {
     // if the scroll is not that big then the class shall be removed
     document.getElementsByTagName('header')[0].classList.remove('header-scrolled')
+    document.getElementById('goToTop').style.display = 'none'
   }
 }
 
@@ -69,4 +72,12 @@ function toggleMusic() {
     musicToggler.classList.remove('music-on')
     currentMediaPlayer = undefined
   }
+}
+
+// go to the top of the document (not supported in IE)
+function goToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
 }
