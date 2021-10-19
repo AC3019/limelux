@@ -22,11 +22,12 @@ header {
   z-index: 20; /* Give a big value so that all other elements go behind */
 }
 
+/* Changing to position fixed adds more browser support than position sticky */
 .header-scrolled {
-  position: -webkit-sticky; /* include support for safari*/
-  position: sticky;
-  top: 1vw;
+  position: fixed;
   margin: 1vw;
+  top: 0;
+  left: 0; right: 0; /* left 0 right 0 is a trick to make the element take full size width */
   box-shadow: 0px 4px 10px #1705067a;
   border-radius: 5px;
 }

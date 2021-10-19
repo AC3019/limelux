@@ -6,6 +6,9 @@ DONT CODE PAGE SPECIFIC FUNCTIONALITIES HERE
 
 /*
 Apply the "shrink and float header bar"
+- wanted to use intersection observer for optimised performance 
+  but that would add a little complexity 
+  and not all browsers support the intersection observer (some outdated didnt support)
 - make the window listen for onscroll function
 - check the scroll on body and the documentElement AKA html itself
 - if the scrollTop is big, apply the header-scrolled class
