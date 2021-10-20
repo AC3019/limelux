@@ -56,23 +56,32 @@ navLinks.forEach(link => {
 // so when the other media player is played, the current playing media player will be paused
 let currentMediaPlayer = undefined
 
+// sometimes there are other way to trigger the bgm to play
+// gonna listen to the onplay and onpause event and toggle the class also
+const bgmElem = document.getElementById('bgm')
+const musicToggler = document.getElementById('music-toggle')
+
+bgmElem.addEventListener('play', () => {
+  musicToggler.classList.add('music-on')
+  musicToggler.classList.remove('music-off')
+})
+
+bgmElem.addEventListener('pause', () => {
+  musicToggler.classList.add('music-off')
+  musicToggler.classList.remove('music-on')
+})
+
 // toggle background music function
 function toggleMusic() {
-  const bgmElem = document.getElementById('bgm')
-  const musicToggler = document.getElementById('music-toggle')
   if (currentMediaPlayer != bgmElem) {
     if (currentMediaPlayer) {
       // pause the current media player if it exists
       currentMediaPlayer.pause()
     }
     bgmElem.play()
-    musicToggler.classList.add('music-on')
-    musicToggler.classList.remove('music-off')
     currentMediaPlayer = bgmElem
   } else {
     currentMediaPlayer.pause()
-    musicToggler.classList.add('music-off')
-    musicToggler.classList.remove('music-on')
     currentMediaPlayer = undefined
   }
 }
