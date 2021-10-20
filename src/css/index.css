@@ -97,22 +97,34 @@ Without the span will remove the arrow pop up from the right and the arrow anima
 }
 
 .featured-product {
-  display: grid;
-  grid-template-areas: 
-    'img heading'
-    'img desc';
+  display: flex;
   width: 70vw;
   height: 15vh; /* lock the size */
   padding: 2.5vw;
   background-color: #fff;
-  /* 
-    Make the content scrollable if overflow happens, not the best thing to do in UX, but it works
-  */
-  overflow: auto; 
+  /* overflow: auto;  */
   border-radius: 8px;
   box-shadow: 0 1px 6px #3b2729;
   transition: .3s;
   cursor: pointer;
+  /* displace abit to make the element appear to be moving after displace back */
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+/* 
+  would like to make the title stick but titles can overflow also, 
+  just make the whole container scrollable thouh overflow is less likely to happen 
+*/
+.desc {
+  overflow: auto;
+  position: relative;
+}
+
+/* A class that will be added to the featured product after it entered the viewport */
+.fade-in {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .featured-product:hover {
@@ -125,7 +137,6 @@ Without the span will remove the arrow pop up from the right and the arrow anima
 }
 
 .featured-product img {
-  grid-area: img;
   /* I rlly dun wanna mess with weird aspect ratio eh image imma just make the size "responsive" */
   width: 20vw;
   height: 15vh;
