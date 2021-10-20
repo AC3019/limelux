@@ -39,7 +39,8 @@
     </nav>
   </header>
   <main>
-    <!-- SRSLY, DIFF FILES SHOULD JUST MODIFY THIS PLACE -->
+    <button id="goToTop" onclick="goToTop()"></button>
+    <!-- SRSLY, DIFF FILES SHOULD JUST MODIFY THINGS THAT GO AFTER THIS LINE -->
     <div class="land-container">
       <h1>You deserve our best service.</h1>
       <!-- Was gonna use a tag but button easier to style-->
@@ -48,6 +49,31 @@
           Shop Now
         </span>
       </button>
+    </div>
+    <div class="featured-products-container">
+      <h2>Featured Products</h2>
+      <div class="featured-product">
+        <img src="../../res/dummyThumbnail.png" alt="Thumbnail">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ratione saepe, commodi eum delectus quis cum.
+        </p>
+      </div>
+      <div class="featured-product">
+        <img src="../../res/dummy-img-2.jpg" alt="Thumbnail">
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ratione saepe, commodi eum delectus quis cum.
+        </p>
+      </div>
+      <!-- 
+        It should have almost the same styling as the button on top for consistency
+        Didn't provide span because I don't want the arrow animation
+        no-margin class removes margin
+      -->
+      <button class="urge-action-btn no-margin">View More</button>
     </div>
   </main>
   <footer>
