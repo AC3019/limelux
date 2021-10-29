@@ -11,3 +11,5 @@ We are required to
 - Wong Xuan Bin
   - AKA [hoshisorakangetsu](https://github.com/hoshisorakangetsu)
   - AKA [hanyue1014](https://github.com/hanyue1014)
+- Lee Wei Ling
+  - AKA [milklwl](https://github.com/milklwl)
