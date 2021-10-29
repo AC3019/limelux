@@ -4,7 +4,7 @@ LimeLux is a group assignment in our Intro to Web Development course in TARC fou
 ## Assignment Details
 We are required to
 - Not use any website builders
-- Not use any frameworks (as in only vanilla HTML, CSS and JS)
+- Not use any frameworks (as in only code in vanilla HTML, CSS and JS)
 - Not use any external JS libraries
 
 ## Team Members
