@@ -11,3 +11,5 @@ We are required to
 - Wong Xuan Bin
   - AKA [hoshisorakangetsu](https://github.com/hoshisorakangetsu)
   - AKA [hanyue1014](https://github.com/hanyue1014)
+- Neoh Soon Chee
+  -AKA [AC3019](https://github.com/AC3019)
