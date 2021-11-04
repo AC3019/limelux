@@ -119,6 +119,7 @@ Without the span will remove the arrow pop up from the right and the arrow anima
 .desc {
   overflow: auto;
   position: relative;
+  width: 50vw;
 }
 
 /* A class that will be added to the featured product after it entered the viewport */
