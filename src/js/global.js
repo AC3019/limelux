@@ -93,3 +93,10 @@ function goToTop() {
     behavior: 'smooth'
   })
 }
+
+function subscribeNewsletter() {
+  // for now just alert they subscribed jiu can d
+  const name = document.querySelector('input[name="name"]').value
+  const email = document.querySelector('input[name="email"]').value
+  alert(`Thanks! ${name}, our newsletter will be sent to ${email} to notify you about our latest news!`)
+}

@@ -216,3 +216,46 @@ footer {
   background-color: #c7c0c0b2;
   position: absolute;
 }
+
+.news-letter-form label,
+.news-letter-form input {
+  display: block;
+  margin: 5px 0;
+}
+
+.news-letter-form input {
+  border-radius: 5px;
+  border: 2px solid #fc6471;
+  outline: none;
+}
+
+input[type="text"], 
+input[type="email"] {
+  width: 45%;
+  padding: 5px 10px;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus {
+  box-shadow: 0 2px 7.5px #3b2729;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #fc6471;
+  border-color: #bd4b55;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: box-shadow .2s;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus { /* if the user use tab to target the button */
+  box-shadow: 0 2px 7.5px #3b2729;
+}
+
+input[type="submit"]:active {
+  box-shadow: 0 2px 4px #3b2729;
+  opacity: .75;
+}

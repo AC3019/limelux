@@ -98,8 +98,20 @@
           <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
-      <div>
-        test 2
+      <div class="news-letter-form">
+        <h3>Get the latest news about us:</h3>
+        <!-- 
+          empty action becuz we don't rlly have server to handle this 
+          it's just here to be here
+          will use js to prevent submission and add our custom form handling
+        -->
+        <form action="" method="POST" onsubmit="event.preventDefault(); subscribeNewsletter()">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Your Name Here" required>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="yourmail@example.com" required>
+          <input type="submit" value="Subscribe">
+        </form>
       </div>
     </div>
     <h5 class="copyright">Copyright (c) LimeLux. All rights reserved</h5>
