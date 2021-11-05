@@ -5,6 +5,63 @@ DONT CODE PAGE SPECIFIC FUNCTIONALITIES HERE
 */
 
 /*
+Prompt user to see if they want bgm anot
+*/
+window.addEventListener('load', () => {
+  const noRemindObj = localStorage.getItem('noremind')
+
+  // if the user chose to not show the prompt, but it had passed that day yet
+  // or if the user didnt even see the prompt before
+  if (!noRemindObj || new Date(noRemindObj.expiry) < new Date()) {
+    let prompt = document.querySelector('.music-prompt')
+    prompt.style.display = 'flex'
+  }
+})
+
+let noRemindOnMusic = false
+
+function closePrompt1(elem) {
+  let prompt = document.querySelectorAll('.music-prompt')
+  if (elem.id == 'playMusic') {
+    toggleMusic()
+    document.querySelector('.music-prompt-bg').style.display = 'none'
+  } else {
+    prompt[0].style.display = 'none'
+    prompt[1].style.display = 'flex'
+  }
+}
+
+function closePrompt2(elem) {
+  let promptParent = document.querySelector('.music-prompt-bg')
+  if (noRemindOnMusic) {
+    // save to localStorage, with a expiry date of 1 day from the day they enter
+    const expiryDate = new Date(new Date().getTime() + 1 * 24 * 60 * 60 * 1000)
+    console.log('Do not show prompt expiry date', expiryDate)
+    const noRemindObj = {
+      expiry: expiryDate
+    }
+    localStorage.setItem('noremind', JSON.stringify(noRemindObj))
+    promptParent.style.display = 'none'
+    // prompt[1].style.display = 'none'
+  } else if (elem.id == 'playMusic') {
+    toggleMusic()
+    promptParent.style.display = 'none'
+  } else {
+    promptParent.style.display = 'none'
+  }
+}
+
+function toggleYesState(elem) {
+  if (elem.checked) {
+    document.querySelectorAll('#playMusic')[1].disabled = true
+    noRemindOnMusic = true
+  } else {
+    document.querySelectorAll('#playMusic')[1].disabled = false
+    noRemindOnMusic = false
+  }
+}
+
+/*
 Apply the "shrink and float header bar"
 - wanted to use intersection observer for optimised performance 
   but that would add a little complexity 

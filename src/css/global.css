@@ -95,6 +95,154 @@ header nav {
   background-image: url(../../res/music-off.png);
 }
 
+.music-prompt-bg {
+  position: fixed;
+  top: 0; bottom: 0; /* Magic to make this thing span the whole page */
+  left: 0; right: 0;
+  background-color: #00000052;
+  z-index: 9999;
+}
+
+.music-prompt {
+  text-align: center;
+  width: 75vw;
+  height: 50vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 0 0 100vw #00000052;
+  background-color: #fff;
+  z-index: 9999; /* go on top of everything */
+  border: 1px solid black; /*temp*/
+}
+
+.music-prompt p {
+  margin: 0 15%;
+}
+
+.music-prompt a:hover {
+  color: #fc6471;
+}
+
+.checkbox * {
+  cursor: pointer;
+}
+
+.action-btns {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  height: 15%;
+}
+
+.action-btns button {
+  width: calc(50% - 3vw);
+}
+
+/* this button will be used in all types of places, so leave the width and height and margin alone*/
+.urge-action-btn {
+  /* width: 15vw;
+  height: 8vh;
+  margin-top: 5vh; */
+  /* padding: 10px; */
+  background-color: #fc6471;
+  border: 2px solid #bd4b55;
+  border-radius: 7.5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.urge-action-btn:hover {
+  box-shadow: 0px 2px 7px #3b2729;
+}
+
+.urge-action-btn:hover span::after {
+  opacity: 1;
+  right: -10px;
+  animation: .5s slide-right linear alternate infinite;
+}
+
+.urge-action-btn:active {
+  opacity: .7;
+  box-shadow: 0px 2px 2px #3b2729;
+}
+
+.urge-action-btn:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+.hero-btn {
+  width: 15vw;
+  height: 8vh;
+  margin-top: 5vh;
+}
+
+.hero-btn span {
+  position: relative;
+  transition: .25s;
+}
+
+.hero-btn span::after {
+  content: ">>";
+  position: absolute;
+  opacity: 0;
+  right: -15px; /* to make a little bit slide-in effect */
+  transition: .25s;
+}
+
+.hero-btn:hover span {
+  padding-right: 20px;
+}
+
+.hero-btn:hover span::after {
+  opacity: 1;
+  right: -10px;
+  animation: .5s slide-right linear alternate infinite;
+}
+
+.browse-more {
+  width: 15vw;
+  height: 8vh;
+}
+
+.secondary-action-btn {
+  /* padding: 10px; */
+  background-color: #fff;
+  border: 2px solid #0e0607;
+  border-radius: 7.5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.secondary-action-btn:hover {
+  box-shadow: 0px 2px 7px #3b2729;
+}
+
+.secondary-action-btn:active {
+  opacity: .7;
+  box-shadow: 0px 2px 2px #3b2729;
+}
+
+.secondary-action-btn:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+/*easy class to remove margin in case you want to remove urge-action-btn eh margin*/
+.no-margin {
+  margin: 0;
+}
+
 #goToTop {
   width: 4vw;
   height: 4vw;
@@ -232,6 +380,7 @@ footer {
 input[type="text"], 
 input[type="email"] {
   width: 45%;
+  max-width: 400px;
   padding: 5px 10px;
 }
 

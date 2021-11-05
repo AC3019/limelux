@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
   <script src="../js/index.js" defer></script>
   <title>Limelux Home</title>
 </head>
+
 <body>
   <!-- 
     This file is supposed to be the landing page and the template for all other pages
@@ -23,6 +25,32 @@
   <audio autoplay loop id="bgm">
     <source src="../../res/yumenokissaten.mp3">
   </audio>
+  <!-- Prompt if user want background music -->
+  <!-- not yet complete, just put it here first -->
+  <div class="music-prompt-bg">
+    <div class="music-prompt">
+      <h1>Do you want to enable background music?</h1>
+      <p>Because of the updates of <a href="https://faq.dailymotion.com/hc/en-us/articles/360025306594-Autoplay-and-Browser-Policies">modern web browsers' users policy</a>, we can't autoplay the background music for you, would you like to listen to the background music?</p>
+      <div class="action-btns">
+        <button class="secondary-action-btn" onclick="closePrompt1(this)">No</button>
+        <button class="urge-action-btn" id="playMusic" onclick="closePrompt1(this)">Yes</button>
+      </div>
+    </div>
+    <div class="music-prompt" style="display: none;">
+      <h1>Are you really sure?</h1>
+      <p>If you select 'Yes, I'm certain' or 'Yes and don't remind me again', you will have to enable the background music yourself by clicking on the button with a music icon on the top right corner.</p>
+      <div class="checkbox">
+        <input type="checkbox" name="noremind" id="noremind" onchange="toggleYesState(this)">
+        <label for="noremind">Yes and don't remind me again for today</label>
+      </div>
+      <div class="action-btns">
+        <button class="secondary-action-btn" id="playMusic" onclick="closePrompt2(this)">No, please enable
+          music</button>
+        <button class="urge-action-btn" onclick="closePrompt2(this)">Yes, I'm certain</button>
+      </div>
+    </div>
+  </div>
+  </div>
   <header>
     <h1>LimeLux</h1>
     <nav>
@@ -31,12 +59,7 @@
       <a href="#" class="nav-links">Our Products</a>
       <a href="#" class="nav-links">About Us</a>
       <a href="#" class="nav-links">Contact Us</a>
-      <a 
-        id="music-toggle" 
-        class="music-off" 
-        title="Toggle Background Music"
-        onclick="toggleMusic()"
-      ></a> 
+      <a id="music-toggle" class="music-off" title="Toggle Background Music" onclick="toggleMusic()"></a>
     </nav>
   </header>
   <main>
@@ -45,7 +68,7 @@
     <div class="land-container">
       <h1>You deserve our best service.</h1>
       <!-- Was gonna use a tag but button easier to style-->
-      <button class="urge-action-btn">
+      <button class="urge-action-btn hero-btn">
         <span>
           Shop Now
         </span>
@@ -58,7 +81,7 @@
         <div class="desc">
           <h3>Lorem, ipsum dolor.</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Ratione saepe, commodi eum delectus quis cum.
           </p>
         </div>
@@ -68,22 +91,22 @@
         <div class="desc">
           <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Quo accusamus eligendi alias, sunt tempore officiis in libero. 
-            Odio, debitis libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quo accusamus eligendi alias, sunt tempore officiis in libero.
+            Odio, debitis libero. Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Hic, nostrum.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Est culpa natus minus tempora eaque facere praesentium dolor error assumenda modi.
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, perspiciatis!
           </p>
-        </div> 
+        </div>
       </div>
       <!-- 
         It should have almost the same styling as the button on top for consistency
         Didn't provide span because I don't want the arrow animation
         no-margin class removes margin
       -->
-      <button class="urge-action-btn no-margin">View More</button>
+      <button class="urge-action-btn browse-more">View More</button>
     </div>
   </main>
   <footer>
@@ -117,4 +140,5 @@
     <h5 class="copyright">Copyright (c) LimeLux. All rights reserved</h5>
   </footer>
 </body>
+
 </html>
