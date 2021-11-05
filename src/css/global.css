@@ -96,14 +96,14 @@ header nav {
 }
 
 #goToTop {
-  width: 5vw;
-  height: 5vw;
+  width: 4vw;
+  height: 4vw;
   display: none; /* Only visible after the user has scrolled the page (using js) */
   border: none;
   box-shadow: 1px 1px 5px #3b2729;
   border-radius: 50%;
   background-image: url(../../res/arrowUp.png);
-  background-size: 3vw 3vw;
+  background-size: 2vw 2vw;
   background-repeat: no-repeat;
   background-position: center;
   position: fixed;
@@ -114,11 +114,11 @@ header nav {
 }
 
 #goToTop:hover {
-  box-shadow: 1px 3px 5px #3b2729;
+  box-shadow: 0px 3px 8px #3b2729;
 }
 
 #goToTop:active {
-  box-shadow: 1px 1px 5px #3b2729;
+  box-shadow: 0px 1px 3px #3b2729;
 }
 
 @keyframes music-disk-rotation {
@@ -132,7 +132,87 @@ header nav {
 }
 
 footer {
-  height: 10vh; /* To be determined, when we know what actually goes in there */
+  /* height: 10vh; To be determined, when we know what actually goes in there */
   /* Also to be determined, prob will be removed as we'll be using elements and not sole text*/
-  text-align: center;
+  display: grid;
+  background-color: #eee;
+}
+
+.form-and-access-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.form-and-access-container div {
+  margin: 15px 0 0 15px;
+}
+
+.quick-access {
+  position: relative;
+}
+
+/* Line separator, used after element cuz its more customisable */
+.quick-access::after {
+  content: '';
+  width: 3px;
+  height: 100%;
+  background-color: #c7c0c0b2;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.quick-access h2 {
+  color: #fc6471;
+}
+
+.quick-access ul {
+  list-style-type: none;
+}
+
+.quick-access li {
+  padding: 5px 0;
+}
+
+.quick-access a {
+  text-decoration: none;
+  position: relative;
+  display: block;
+  transition: padding .1s;
+}
+
+.quick-access a::before {
+  content: '>';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  opacity: 0;
+  transition: padding .2s;
+}
+
+.quick-access a:hover {
+  padding-left: 2ch;
+  color: #df1829;
+}
+
+.quick-access a:hover::before {
+  /* displace back instead adjust position (may cause bug where it jump here jump thr )*/
+  padding-left: 5px; 
+  opacity: 1;
+}
+
+.copyright {
+  padding: 1.25em;
+  position: relative;
+}
+
+.copyright::before {
+  content: '';
+  height: 1px;
+  /* width: 95%; */
+  left: 1%; right: 1%; /* Use the position absolute hack again to determine the width */
+  top: 25%;
+  background-color: #c7c0c0b2;
+  position: absolute;
 }
