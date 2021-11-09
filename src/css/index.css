@@ -9,9 +9,9 @@
 }
 
 /* Move everything in the land-container but not the container itself up abit */
-.land-container * {
+/* .land-container * {
   transform: translateY(-40%);
-}
+} */
 
 .hero-btn {
   width: 15vw;
