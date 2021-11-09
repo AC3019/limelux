@@ -40,7 +40,7 @@ function closePrompt2(elem) {
   let promptParent = document.querySelector('.music-prompt-bg')
   if (noRemindOnMusic) {
     // save to localStorage, with a expiry date of 1 day from the day they enter
-    const expiryDate = new Date(new Date().getTime() + 1 * 60 * 1000)
+    const expiryDate = new Date(new Date().getTime() + 1 * 24 * 60 * 60 * 1000)
     console.log('"Do not show prompt" expiry date', expiryDate)
     // const noRemindObj = {
     //   expiry: expiryDate

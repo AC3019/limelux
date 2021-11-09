@@ -13,6 +13,39 @@
   transform: translateY(-40%);
 } */
 
+.land {
+  height: 80vh;
+  width: 95vw;
+  display: grid;
+  grid-template-columns: 45% 50%;
+  align-items: center;
+  gap: 5%;
+}
+
+.land img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-height: 80vh; /* not sure if this is a gud practice but since we alrd know the height of the grid, this works */
+}
+
+.captions {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* only take the first one, the second one I want it to not have margin top */
+.captions h3:first-of-type {
+  margin: 3vh 3vw 0 0;
+}
+
+/* we still want the second one to have some margin right thouh */
+.captions h3:nth-of-type(2) {
+  margin-right: 3vw;
+}
+
 .hero-btn {
   width: 15vw;
   height: 8vh;
