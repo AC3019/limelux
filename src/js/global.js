@@ -8,7 +8,7 @@ DONT CODE PAGE SPECIFIC FUNCTIONALITIES HERE
 Prompt user to see if they want bgm anot
 */
 window.addEventListener('load', () => {
-  const noRemindObj = localStorage.getItem('noremind')
+  const noRemindObj = localStorage.getItem('limelux-noremind-music')
 
   // if the user chose to not show the prompt, but it had passed that day yet
   // or if the user didnt even see the prompt before
@@ -40,7 +40,8 @@ function closePrompt2(elem) {
     const noRemindObj = {
       expiry: expiryDate
     }
-    localStorage.setItem('noremind', JSON.stringify(noRemindObj))
+    // use special key, localstorage is shared across all local files if they use local file to open
+    localStorage.setItem('limelux-noremind-music', JSON.stringify(noRemindObj))
     promptParent.style.display = 'none'
     // prompt[1].style.display = 'none'
   } else if (elem.id == 'playMusic') {

@@ -59,9 +59,9 @@ header nav {
   position: absolute;
   opacity: 0;
   width: 0vw;
-  height: 5px;
+  height: 3px;
   left: min(5vw, 55px); /* center of the nav-links elements (excluding its own width) */
-  transform: translateX(-50%); /* displace it back by its width */
+  transform: translate(-50%, 50%); /* displace it back by its width, and move down by half of its height */
   background-color: #170506;
   border-radius: 100000000px;
   transition: .5s;
@@ -110,6 +110,7 @@ header nav {
 .music-prompt {
   text-align: center;
   width: 75vw;
+  max-width: 800px; /*don't make it look too spaced */
   height: 50vh;
   position: fixed;
   top: 50%;
@@ -145,7 +146,7 @@ header nav {
 }
 
 .action-btns button {
-  width: calc(50% - 3vw);
+  width: calc(50% - 20px); /* give a little spacing */
 }
 
 /* this button will be used in all types of places, so leave the width and height and margin alone*/
