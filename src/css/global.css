@@ -47,6 +47,7 @@ header nav {
   text-align: center;
   display: block;
   width: 10vw;
+  max-width: 110px; /* too big width will give the spacing on bigger screen sizes too big */
   padding: 10px 0px;
   position: relative;
   text-decoration: none;
@@ -59,7 +60,8 @@ header nav {
   opacity: 0;
   width: 0vw;
   height: 5px;
-  left: calc(5vw - 1.25vw);
+  left: min(5vw, 55px); /* center of the nav-links elements (excluding its own width) */
+  transform: translateX(-50%); /* displace it back by its width */
   background-color: #170506;
   border-radius: 100000000px;
   transition: .5s;
@@ -75,7 +77,9 @@ header nav {
   background-color: #170506;
   border-radius: 100000000px; */
   opacity: 1;
-  width: 2.5vw;
+  width: min(2.5vw, 27.5px);
+  /* bug encountered when using max-width, when hovered away, the bar will magically bump up to 2.5vw eh size */
+  /* max-width: 27.5px; */ /* will be using the min function in css to avoid the bug */
 }
 
 #music-toggle {
@@ -177,40 +181,6 @@ header nav {
 .urge-action-btn:disabled {
   opacity: .7;
   cursor: not-allowed;
-}
-
-.hero-btn {
-  width: 15vw;
-  height: 8vh;
-  margin-top: 5vh;
-}
-
-.hero-btn span {
-  position: relative;
-  transition: .25s;
-}
-
-.hero-btn span::after {
-  content: ">>";
-  position: absolute;
-  opacity: 0;
-  right: -15px; /* to make a little bit slide-in effect */
-  transition: .25s;
-}
-
-.hero-btn:hover span {
-  padding-right: 20px;
-}
-
-.hero-btn:hover span::after {
-  opacity: 1;
-  right: -10px;
-  animation: .5s slide-right linear alternate infinite;
-}
-
-.browse-more {
-  width: 15vw;
-  height: 8vh;
 }
 
 .secondary-action-btn {

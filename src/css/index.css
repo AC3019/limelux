@@ -13,6 +13,35 @@
   transform: translateY(-40%);
 }
 
+.hero-btn {
+  width: 15vw;
+  height: 8vh;
+  margin-top: 5vh;
+}
+
+.hero-btn span {
+  position: relative;
+  transition: .25s;
+}
+
+.hero-btn span::after {
+  content: ">>";
+  position: absolute;
+  opacity: 0;
+  right: -15px; /* to make a little bit slide-in effect */
+  transition: .25s;
+}
+
+.hero-btn:hover span {
+  padding-right: 20px;
+}
+
+.hero-btn:hover span::after {
+  opacity: 1;
+  right: -10px;
+  animation: .5s slide-right linear alternate infinite;
+}
+
 @keyframes slide-right {
   from {
     opacity: .25;
@@ -90,4 +119,9 @@
   object-fit: fill;
   object-position: center;
   margin-right: 2.5vw;
+}
+
+.browse-more {
+  width: 15vw;
+  height: 8vh;
 }
