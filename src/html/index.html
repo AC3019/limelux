@@ -40,11 +40,11 @@
       <h1>Are you really sure?</h1>
       <p>If you select 'Yes, I'm certain' or 'Yes and don't remind me again', you will have to enable the background music yourself by clicking on the button with a music icon on the top right corner.</p>
       <div class="checkbox">
-        <input type="checkbox" name="noremind" id="noremind" onchange="toggleYesState(this)">
+        <input type="checkbox" name="noremind" id="noremind" onchange="toggleYesState(this)" checked>
         <label for="noremind">Yes and don't remind me again for today</label>
       </div>
       <div class="action-btns">
-        <button class="secondary-action-btn" id="playMusic" onclick="closePrompt2(this)">
+        <button class="secondary-action-btn" id="playMusic" onclick="closePrompt2(this)" disabled>
           No, please enable music
         </button>
         <button class="urge-action-btn" onclick="closePrompt2(this)">
