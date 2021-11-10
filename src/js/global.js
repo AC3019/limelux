@@ -10,7 +10,7 @@ Prompt user to see if they want bgm anot
 window.addEventListener('load', () => {
   const noRemind = localStorage.getItem('limelux-noremind-music')
 
-  console.log(noRemind, !noRemind, !noRemind || new Date(noRemind) > new Date())
+  console.log(noRemind, !noRemind, !noRemind || new Date(noRemind) < new Date())
 
   // if the user chose to not show the prompt, but today already is the expiry date
   // or if the user didnt even see the prompt before (if user no see prompt noRemind will be null)
@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
     localStorage.removeItem('limelux-noremind-music')
 
     let prompt = document.querySelector('.music-prompt-bg')
-    prompt.style.display = 'flex'
+    prompt.style.display = 'block'
   }
 })
 
