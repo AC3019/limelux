@@ -1,0 +1,25 @@
+.main{
+    margin: 3% 20% 3% 20%;
+}
+
+p{
+    font-size: large;
+}
+
+span{
+    color: #E30013;
+    font-weight: bold;
+}
+table{
+    width: 100%;
+}
+
+tr, td, th{
+    text-align: center;
+    font-size: large;
+}
+
+table, tr, td, th{
+    border: solid 2px black;
+    border-collapse: collapse;
+}
