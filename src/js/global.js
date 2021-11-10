@@ -8,12 +8,17 @@ DONT CODE PAGE SPECIFIC FUNCTIONALITIES HERE
 Prompt user to see if they want bgm anot
 */
 window.addEventListener('load', () => {
-  const noRemindObj = localStorage.getItem('noremind')
+  const noRemind = localStorage.getItem('limelux-noremind-music')
 
-  // if the user chose to not show the prompt, but it had passed that day yet
-  // or if the user didnt even see the prompt before
-  if (!noRemindObj || new Date(noRemindObj.expiry) < new Date()) {
-    let prompt = document.querySelector('.music-prompt')
+  console.log(noRemind, !noRemind, !noRemind || new Date(noRemind) > new Date())
+
+  // if the user chose to not show the prompt, but today already is the expiry date
+  // or if the user didnt even see the prompt before (if user no see prompt noRemind will be null)
+  if (!noRemind || new Date() > new Date(noRemind)) {
+    // delete the noremind localstorage item
+    localStorage.removeItem('limelux-noremind-music')
+
+    let prompt = document.querySelector('.music-prompt-bg')
     prompt.style.display = 'flex'
   }
 })
@@ -36,11 +41,12 @@ function closePrompt2(elem) {
   if (noRemindOnMusic) {
     // save to localStorage, with a expiry date of 1 day from the day they enter
     const expiryDate = new Date(new Date().getTime() + 1 * 24 * 60 * 60 * 1000)
-    console.log('Do not show prompt expiry date', expiryDate)
-    const noRemindObj = {
-      expiry: expiryDate
-    }
-    localStorage.setItem('noremind', JSON.stringify(noRemindObj))
+    console.log('"Do not show prompt" expiry date', expiryDate)
+    // const noRemindObj = {
+    //   expiry: expiryDate
+    // }
+    // use special key, localstorage is shared across all local files if they use local file to open
+    localStorage.setItem('limelux-noremind-music', expiryDate)
     promptParent.style.display = 'none'
     // prompt[1].style.display = 'none'
   } else if (elem.id == 'playMusic') {

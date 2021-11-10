@@ -27,7 +27,7 @@
   </audio>
   <!-- Prompt if user want background music -->
   <!-- not yet complete, just put it here first -->
-  <div class="music-prompt-bg">
+  <div class="music-prompt-bg" style="display: none;">
     <div class="music-prompt">
       <h1>Do you want to enable background music?</h1>
       <p>Because of the updates of <a href="https://faq.dailymotion.com/hc/en-us/articles/360025306594-Autoplay-and-Browser-Policies">modern web browsers' users policy</a>, we can't autoplay the background music for you, would you like to listen to the background music?</p>
@@ -69,13 +69,22 @@
     <button id="goToTop" onclick="goToTop()"></button>
     <!-- SRSLY, DIFF FILES SHOULD JUST MODIFY THINGS THAT GO AFTER THIS LINE -->
     <div class="land-container">
-      <h1>You deserve our best service.</h1>
-      <!-- Was gonna use a tag but button easier to style-->
-      <button class="urge-action-btn hero-btn">
-        <span>
-          Shop Now
-        </span>
-      </button>
+      <div class="land">
+        <div class="img">
+          <img src="../../res/marketing.png" alt="Your internet connection not stable to load this picture">
+        </div>
+        <div class="captions">
+          <h1>You deserve our best service.</h1>
+          <h3>Leave worrying about presenting your product to us!</h3>
+          <h3>Websites or banners, we do it all!</h3>
+          <!-- Was gonna use a tag but button easier to style-->
+          <button class="urge-action-btn hero-btn">
+            <span>
+              Shop Now
+            </span>
+          </button>
+        </div>
+      </div>
     </div>
     <div class="featured-products-container">
       <h2>Featured Products</h2>
