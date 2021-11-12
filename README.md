@@ -6,7 +6,7 @@ We are required to
 - Not use any website builders
 - Not use any frameworks (as in only code in vanilla HTML, CSS and JS)
 - Not use any external JS libraries
-Due Date is on **29 November 2021**
+- Due Date is on **29 November 2021**
 
 ## Team Members
 - Wong Xuan Bin
