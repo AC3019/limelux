@@ -2,6 +2,10 @@
     margin: 3% 20% 3% 20%;
 }
 
+h1, p {
+    margin: 3vh 0;
+}
+
 p{
     font-size: large;
 }
@@ -10,13 +14,23 @@ span{
     color: #E30013;
     font-weight: bold;
 }
+
 table{
     width: 100%;
 }
 
+th {
+    text-align: left;
+}
+
 tr, td, th{
-    text-align: center;
+    padding: 15px 10px;
     font-size: large;
+}
+
+th:first-child, td:first-child {
+    text-align: center;
+    width: 20%;
 }
 
 table, tr, td, th{

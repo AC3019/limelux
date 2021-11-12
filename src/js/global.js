@@ -23,7 +23,8 @@ window.addEventListener('load', () => {
   }
 })
 
-let noRemindOnMusic = false
+// the checkbox will be checked by default
+let noRemindOnMusic = true
 
 function closePrompt1(elem) {
   let prompt = document.querySelectorAll('.music-prompt')
