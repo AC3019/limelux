@@ -5,42 +5,34 @@
 }
 
 .TPheading{
-    margin: 2% 0% 0.5% 3%;
+    margin: 2% 0% 0.5% 7.5%;
     font-weight: bolder;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .BTheading{
-    margin: 0.5% 0% 0.5% 3%;
+    margin: 0.5% 0% 0.5% 7.5%;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .form-box{
     width: 50%;
+    margin: 2.5% 11% 0% 5%;
 }
 
 .form{
-    margin: 2.5% 2.5% 2.5% 2.5%;
+    margin: 2.5% 20% 0% 5%;
     background-color: #EEEEEE;
     border: 2px solid #FC6471;
     border-radius: 20px;
-}
-
-.img-box{
-    width: 50%;
 }
 
 .img{
-    width: 50%;
-    height: 50%;
-}
-
-.info{
-    margin: 2.5% 2.5% 2.5% 2.5%;
-    background-color: #EEEEEE;
-    border: 2px solid #FC6471;
-    border-radius: 20px;
+    object-fit: contain;
+    width: 65%;
+    height: auto;
+    max-height: 80vh;
 }
 
 .input{
@@ -55,6 +47,7 @@
 }
 
 .NameIpt{
+    margin: 2% 0% 0% 8%;
     display: block;
     padding: 12px 100px;
 }
@@ -66,14 +59,66 @@
 }
 
 .EmailIpt{
+    margin: 2% 0% 0% 8%;
     display: block;
     padding: 12px 100px;
 }
 
 .textbox{
-    margin: 2% 0% 0% 3%;
+    margin: 1% 2% 0% 6%;
     display: block;
-    padding: 30px 303px;
+    padding: 90px 285px;
+}
+
+.btn{
+    margin: 2% 1% 1% 75%;
+    padding: 15px 50px;
+    background-color: #FC6471;
+    border-color: #BD4B55;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: box-shadow .2s;
+}
+
+.btn :hover,
+.btn :focus{
+    box-shadow: 0 2px 7.5px #3b2729;
+}
+
+.info{
+    margin: 2.5% 11% 2.5% 7%;
+    background-color: #EEEEEE;
+    border: 2px solid #FC6471;
+    border-radius: 20px;
+}
+
+.detail{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.xbDetail{
+    display: grid;
+    margin: 1% 0% 1% 4%;
+    width: 40%;
+}
+
+.scDetail{
+    display: grid;
+    margin: 1% 0% 1% 0%;
+    width: 40%;
+}
+
+.wlDetail{
+    display: grid;
+    margin: 1% 0% 1% 0%;
+    width: 40%;
+}
+
+.PersonalInfo{
+    font-weight: bold;
+    font-size: 25px;
 }
 
 h1{
@@ -81,22 +126,33 @@ h1{
 }
 
 h3{
-    margin: 1% 0% 0% 3%;
+    margin: 5% 0% 0% 6%;
     font-weight: bolder;
-    font-size: 35px;
+    font-size: 45px;
 }
 
-p{
-    margin: 0.5% 0% 0% 3%;
-    font-weight: 600;
+h4{
+    margin: 0% 0% 0% 1%;
+    font-weight: bold;
     font-size: 25px;
 }
 
+p{
+    margin: 0.5% 0% 0% 6%;
+    font-weight: 600;
+    font-size: 30px;
+}
+
 label{
-    font-size: x-large;
+    margin: 3% 0% 0% 8%;
+    font-size: xx-large;
 }
 
 input{
     border: 2px solid #FC6471;
     border-radius: 7px;
+}
+
+span{
+    color: #F92436
 }
