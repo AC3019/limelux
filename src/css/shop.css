@@ -64,3 +64,17 @@ will use js to apply filter-active under 2 circumstances:
 .category {
     margin: 5vh 0;
 }
+
+.category h1 {
+    position: relative;
+}
+
+.category h1::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 95%;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+}
