@@ -64,3 +64,36 @@ will use js to apply filter-active under 2 circumstances:
 .category {
     margin: 5vh 0;
 }
+
+.category h1 {
+    position: relative;
+}
+
+.category h1::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 95%;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18vw;
+    max-width: 300px;
+}
+
+.product img {
+    height: 13vh;
+    width: 88%;
+    margin: 1vh 6%;
+}
+
+.product-details {
+    width: 88%;
+    margin: 1vh 6%;
+}
