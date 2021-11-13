@@ -1,0 +1,91 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.TPheading{
+    margin: 2% 0% 0.5% 3%;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.BTheading{
+    margin: 0.5% 0% 0.5% 3%;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.form-box{
+    width: 50%;
+}
+
+.form{
+    margin: 2.5% 2.5% 2.5% 2.5%;
+    background-color: #EEEEEE;
+    border: 2px solid #FC6471;
+    border-radius: 20px;
+}
+
+.img-box{
+    width: 50%;
+}
+
+.img{
+    width: 50%;
+    height: 50%;
+}
+
+.info{
+    margin: 2.5% 2.5% 2.5% 2.5%;
+    background-color: #EEEEEE;
+    border: 2px solid #FC6471;
+    border-radius: 20px;
+}
+
+.input{
+    margin: 2% 0% 0% 3%;
+    display: flex;
+    flex-direction: row;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+}
+
+.NameIpt{
+    display: block;
+    width: 10px;
+    height: 5px;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    margin: 1% 0% 0% 1%;
+}
+
+h3{
+    margin: 1% 0% 0% 3%;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+p{
+    margin: 0.5% 0% 0% 3%;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+label{
+    font-size: x-large;
+}
+
+input{
+    border: 2px solid #FC6471;
+    border-radius: 7px;
+}
