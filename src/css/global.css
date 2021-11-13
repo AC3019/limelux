@@ -348,8 +348,8 @@ footer {
   outline: none;
 }
 
-input[type="text"], 
-input[type="email"] {
+footer input[type="text"], 
+footer input[type="email"] {
   width: 45%;
   max-width: 400px;
   padding: 5px 10px;
