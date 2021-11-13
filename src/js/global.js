@@ -123,6 +123,7 @@ let currentMediaPlayer = undefined
 // sometimes there are other way to trigger the bgm to play
 // gonna listen to the onplay and onpause event and toggle the class also
 const bgmElem = document.getElementById('bgm')
+bgmElem.volume = '0.6'  // set the volume to 60%
 const musicToggler = document.getElementById('music-toggle')
 
 bgmElem.addEventListener('play', () => {
