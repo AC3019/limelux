@@ -214,6 +214,10 @@ header nav {
   margin: 0;
 }
 
+main {
+  min-height: 100vh;
+}
+
 #goToTop {
   width: 4vw;
   height: 4vw;

@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/shop.css">
   <script src="../js/global.js" defer></script>
-  <script src="../js/index.js" defer></script>
+  <script src="../js/shop.js" defer></script>
   <title>Limelux Products</title>
 </head>
 
@@ -19,10 +19,9 @@
   -->
 
   <!-- 
-    seems like autoplay property doesnt work very well,
     users will need to be pressing the music icon on top right corner to play the bgm
   -->
-  <audio autoplay loop id="bgm">
+  <audio loop id="bgm">
     <source src="../../res/yumenokissaten.mp3">
   </audio>
   <!-- Prompt if user want background music -->
@@ -58,8 +57,8 @@
     <h1>LimeLux</h1>
     <nav>
       <!-- An exception: change the active to where the user at -->
-      <a href="index.html" class="nav-links active">Home</a>
-      <a href="shop.html" class="nav-links">Our Products</a>
+      <a href="index.html" class="nav-links">Home</a>
+      <a href="shop.html" class="nav-links active">Our Products</a>
       <a href="aboutUs.html" class="nav-links">About Us</a>
       <a href="contact.html" class="nav-links">Contact Us</a>
       <a id="music-toggle" class="music-off" title="Toggle Background Music" onclick="toggleMusic()"></a>
@@ -68,57 +67,49 @@
   <main>
     <button id="goToTop" onclick="goToTop()"></button>
     <!-- SRSLY, DIFF FILES SHOULD JUST MODIFY THINGS THAT GO AFTER THIS LINE -->
-    <div class="land-container">
-      <div class="land">
-        <div class="img">
-          <img src="../../res/marketing.png" alt="Your internet connection not stable to load this picture">
-        </div>
-        <div class="captions">
-          <h1>You deserve our best service.</h1>
-          <h3>Leave worrying about presenting your product to us!</h3>
-          <h3>Websites or banners, we do it all!</h3>
-          <!-- Was gonna use a tag but button easier to style-->
-          <button class="urge-action-btn hero-btn">
-            <span>
-              Shop Now
-            </span>
-          </button>
-        </div>
+    <div class="content-container">
+      <div class="side-nav">
+        <!-- will add onclick filter product function later -->
+        <h1 
+            class="filter"
+            data-filter-category="web"
+            onmouseenter="filterHovered(this)"
+            onmouseleave="filterHovered(this)"
+            onclick="filterCategory(this)">
+          Websites
+        </h1>
+        <h1 
+            class="filter"
+            data-filter-category="banner"
+            onmouseenter="filterHovered(this)"
+            onmouseleave="filterHovered(this)"
+            onclick="filterCategory(this)">
+          Banners
+        </h1>
+        <h1 
+            class="filter"
+            data-filter-category="null"
+            onmouseenter="filterHovered(this)"
+            onmouseleave="filterHovered(this)"
+            onclick="filterCategory(this)">
+          Coming Soon
+        </h1>
       </div>
-    </div>
-    <div class="featured-products-container">
-      <h2>Featured Products</h2>
-      <div class="featured-product">
-        <img src="../../res/dummyThumbnail.png" alt="Thumbnail">
-        <div class="desc">
-          <h3>Lorem, ipsum dolor.</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ratione saepe, commodi eum delectus quis cum.
-          </p>
+      <div class="product-categories">
+        <div class="category" id="web">
+          <h1>Websites</h1>
+          <div class="website-containers">
+            <div class="product">
+
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="featured-product">
-        <img src="../../res/dummy-img-2.jpg" alt="Thumbnail">
-        <div class="desc">
-          <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quo accusamus eligendi alias, sunt tempore officiis in libero.
-            Odio, debitis libero. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Hic, nostrum.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Est culpa natus minus tempora eaque facere praesentium dolor error assumenda modi.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, perspiciatis!
-          </p>
+        <div class="category" id="banner">
+          <h1>Banners</h1>
+          <div class="banner-containers"></div>
         </div>
+      
       </div>
-      <!-- 
-        It should have almost the same styling as the button on top for consistency
-        Didn't provide span because I don't want the arrow animation
-        no-margin class removes margin
-      -->
-      <button class="urge-action-btn browse-more">View More</button>
     </div>
   </main>
   <footer>
