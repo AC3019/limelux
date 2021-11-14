@@ -68,6 +68,11 @@ function toggleYesState(elem) {
   }
 }
 
+// click company name to get back to home page
+document.querySelector('header h1').addEventListener('click', () => {
+  location.href = './index.html'
+})
+
 /*
 Apply the "shrink and float header bar"
 - wanted to use intersection observer for optimised performance 
