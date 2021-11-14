@@ -1,78 +1,122 @@
 .main{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 3vw;
+    align-items: center;
     width: 100%;
+    height: 75vh;
 }
 
 .TPheading{
-    margin: 2% 0% 0.5% 7.5%;
+    /* margin: 2% 0% 0.5% 7.5%; */
+    margin: 0 2vw;
+    margin-top: 3vh;
     font-weight: bolder;
     font-size: 50px;
 }
 
 .BTheading{
-    margin: 0.5% 0% 0.5% 7.5%;
+    /* margin: 0.5% 0% 0.5% 7.5%; */
+    margin: 0 2vw;
+    margin-top: 1vh;
     font-weight: bold;
     font-size: 35px;
 }
 
 .form-box{
-    width: 50%;
-    margin: 2.5% 11% 0% 5%;
+    width: 60vw;
+    /* margin: 2.5% 11% 0% 5%; */
 }
 
 .form{
-    margin: 2.5% 20% 0% 5%;
+    /* margin: 2.5% 20% 0% 5%; */
+    margin: 0 2vw;
+    padding: 2vh 3vw;
+    /* display: flex; */
+    /* flex-direction: column; */
     background-color: #EEEEEE;
     border: 2px solid #FC6471;
     border-radius: 20px;
 }
 
+main form {
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 0;
+}
+
 .img{
     object-fit: contain;
-    width: 65%;
+    width: 80%;
     height: auto;
     max-height: 80vh;
 }
 
 .input{
-    margin: 2% 0% 0% 3%;
+    /* margin: 2% 0% 0% 3%; */
+    margin: 2vh 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-.name{
+.name, .email{
     display: flex;
     flex-direction: column;
+    width: 45%;
 }
 
-.NameIpt{
+.NameIpt, .EmailIpt {
+    /* width: 75%; */
+    padding: 5px 20px;
+    font-size: 1.1em;
+}
+
+#message {
+    padding: 5px 20px;
+    font-size: 1.1em;
+    border: 2px solid #FC6471;
+    border-radius: 8px;
+    outline: none;
+    transition: .2s;
+}
+
+#message:focus {
+  box-shadow: 0 2px 7.5px #3b2729;
+}
+
+/* .NameIpt{
     margin: 2% 0% 0% 8%;
     display: block;
     padding: 12px 100px;
-}
+} */
 
-.email{
+/* .email{
     margin: 0% 0% 0% 3%;
     display: flex;
     flex-direction: column;
-}
+    width: 40%;
+} */
 
-.EmailIpt{
+/* .EmailIpt{
     margin: 2% 0% 0% 8%;
     display: block;
     padding: 12px 100px;
-}
+} */
 
-.textbox{
+/* .textbox{
     margin: 1% 2% 0% 6%;
     display: block;
     padding: 90px 285px;
-}
+} */
 
 .btn{
-    margin: 2% 1% 1% 75%;
+    /* margin: 2% 1% 1% 75%; */
+    width: fit-content;
     padding: 15px 50px;
+    margin: 2vh 0;
+    margin-left: auto;
     background-color: #FC6471;
     border-color: #BD4B55;
     font-weight: bolder;
@@ -86,7 +130,9 @@
 }
 
 .info{
-    margin: 2.5% 11% 2.5% 7%;
+    /* margin: 2.5% 11% 2.5% 7%; */
+    margin: 4vh 2vw;
+    padding: 1vh 2vw;
     background-color: #EEEEEE;
     border: 2px solid #FC6471;
     border-radius: 20px;
@@ -95,10 +141,16 @@
 .detail{
     display: flex;
     flex-direction: row;
-    margin: auto;
+    /* justify-content: space-between; */
+    /* margin: auto; */
 }
 
-.xbDetail{
+.contactDetail {
+    display: grid;
+    width: 40%;
+}
+
+/* .xbDetail{
     display: grid;
     margin: 1% 0% 1% 4%;
     width: 40%;
@@ -114,45 +166,70 @@
     display: grid;
     margin: 1% 0% 1% 0%;
     width: 40%;
-}
+} */
 
 .PersonalInfo{
     font-weight: bold;
-    font-size: 25px;
+    font-size: 22px;
 }
 
-h1{
+.smallinfo {
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.smallinfo a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #F92436;
+}
+
+/* h1{
     margin: 1% 0% 0% 1%;
+} */
+
+
+/* make sure it doesn't influence elements outside main */
+
+main h1,
+main h4 {
+    margin: 1vh 0;
 }
 
-h3{
-    margin: 5% 0% 0% 6%;
+main h1 {
+    margin-bottom: 0;
+}
+
+main h3{
+    /* margin: 5% 0% 0% 6%; */
     font-weight: bolder;
     font-size: 45px;
 }
 
-h4{
-    margin: 0% 0% 0% 1%;
+main h4{
+    /* margin: 0% 0% 0% 1%; */
+    margin-top: 0;
     font-weight: bold;
     font-size: 25px;
 }
 
-p{
-    margin: 0.5% 0% 0% 6%;
+main p{
+    /* margin: 0.5% 0% 0% 6%; */
     font-weight: 600;
-    font-size: 30px;
+    font-size: 24px;
 }
 
-label{
-    margin: 3% 0% 0% 8%;
-    font-size: xx-large;
+main label{
+    /* margin: 3% 0% 0% 8%; */
+    margin: 1vh 0;
+    /* font-size: xx-large; */
 }
 
-input{
+main input{
     border: 2px solid #FC6471;
     border-radius: 7px;
 }
 
-span{
+main span{
     color: #F92436
 }
