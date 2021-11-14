@@ -15,4 +15,4 @@ We are required to
 - Lee Wei Ling
   - AKA [milklwl](https://github.com/milklwl)
 - Neoh Soon Chee
-  -AKA [AC3019](https://github.com/AC3019)
+  - AKA [AC3019](https://github.com/AC3019)
