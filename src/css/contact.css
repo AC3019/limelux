@@ -71,6 +71,7 @@ main form {
     /* width: 75%; */
     padding: 5px 20px;
     font-size: 1.1em;
+    outline: none;
 }
 
 #message {
