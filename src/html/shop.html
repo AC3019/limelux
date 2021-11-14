@@ -98,20 +98,46 @@
       <div class="product-categories">
         <div class="category" id="web">
           <h1>Websites</h1>
-          <div class="website-containers">
-            <div class="product">
-              <!-- 5:3 eh aspect ratio works best for now -->
-              <img src="https://source.unsplash.com/random" alt="productimg">
+          <div class="category-containers" id="web">
+            <!-- zhijie apply onclick function to this div can d, btn eh event will bubble up and will call dao this div eh function also eh -->
+            <div class="product" onclick="console.log('test')">
+              <img src="../../res/car-rental-thumbnail.png" alt="product image">
               <div class="product-details">
-                <h2>Title</h2>
+                <h2>Car Rental Website</h2>
                 <h4>RM <span class="price-highlight">XXX</span></h4>
+                <button class="urge-action-btn">Learn More</button>
+              </div>
+            </div>
+            <div class="product" onclick="console.log('test')">
+              <img src="../../res/hackathon.png" alt="product image">
+              <div class="product-details">
+                <h2>COVID Info Center</h2>
+                <h4>RM <span class="price-highlight">XXX</span></h4>
+                <button class="urge-action-btn">Learn More</button>
+              </div>
+            </div>
+            <div class="product" onclick="console.log('test')">
+              <img src="../../res/no-preview.png" alt="product image">
+              <div class="product-details">
+                <h2>Custom Made</h2>
+                <h4>RM <span class="price-highlight">100 - 500/page</span></h4>
+                <button class="urge-action-btn">Learn More</button>
               </div>
             </div>
           </div>
         </div>
         <div class="category" id="banner">
           <h1>Banners</h1>
-          <div class="banner-containers"></div>
+          <div class="category-containers" id="banner">
+            <div class="product" onclick="console.log('test')">
+              <img src="../../res/no-preview.png" alt="product image">
+              <div class="product-details">
+                <h2>Custom Made</h2>
+                <h4>RM <span class="price-highlight">20 - 50/banner</span></h4>
+                <button class="urge-action-btn">Learn More</button>
+              </div>
+            </div>
+          </div>
         </div>
       
       </div>
