@@ -17,7 +17,25 @@ function filterCategory(elem) {
     // there's nothing to filter
     if (currentFilter && elem == currentFilter) return
 
-    // for now just toggle the class see if it works
+    const filterCategory = elem.getAttribute('data-filter-category')
+    // console.log(filterCategory)
+
+    if (filterCategory === 'null') {
+        alert('More categories are coming soon, for now, it doesn\'t exist yet, sorry.')
+        // skip the rest of this function
+        return
+    }
+
+    // remove the visibility of all the divs (display none)
+    document.querySelectorAll('div.category').forEach(elem => {
+        elem.style.display = 'none'
+    })
+
+    // toggle back the visibility of the div with the id that matches the filter
+    document.getElementById(filterCategory).style.display = 'block'
+
+    goToTop()
+
     elem.classList.add('filter-active')
     // if there is already a filter, remove the filter-active class from it
     if (currentFilter) {
