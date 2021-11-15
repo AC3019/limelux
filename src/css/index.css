@@ -130,6 +130,10 @@
   width: 50vw;
 }
 
+.desc h3 {
+  margin-bottom: 1vh;
+}
+
 /* A class that will be added to the featured product after it entered the viewport */
 .fade-in {
   transform: translateY(0);
