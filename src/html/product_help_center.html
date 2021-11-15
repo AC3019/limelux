@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/product_w_vid.css">
   <script src="../js/global.js" defer></script>
-  <script src="../js/index.js" defer></script>
-  <title>Limelux Home</title>
+  <script src="../js/product_w_vid.js" defer></script>
+  <title>Limelux Product - Health Help Center Website</title>
 </head>
 
 <body>
@@ -57,7 +57,7 @@
     <h1>LimeLux</h1>
     <nav>
       <!-- An exception: change the active to where the user at -->
-      <a href="index.html" class="nav-links active">Home</a>
+      <a href="index.html" class="nav-links">Home</a>
       <a href="shop.html" class="nav-links">Our Products</a>
       <a href="aboutUs.html" class="nav-links">About Us</a>
       <a href="contact.html" class="nav-links">Contact Us</a>
@@ -67,53 +67,49 @@
   <main>
     <button id="goToTop" onclick="goToTop()"></button>
     <!-- SRSLY, DIFF FILES SHOULD JUST MODIFY THINGS THAT GO AFTER THIS LINE -->
-    <div class="land-container">
-      <div class="land">
-        <div class="img">
-          <img src="../../res/marketing.png" alt="Your internet connection not stable to load this picture">
+    <div class="content-container">
+      <div class="product-vid">
+        <video src="../../res/hackathon.mov" controls></video>
+      </div>
+      <div class="product-des">
+        <h1>Car Rental Website</h1>
+        <div class="product-features">
+          <p>Simple Features</p>
+          <ul>
+            <li>lorem ipsum</li>
+            <li>lorem ipsum dolor</li>
+            <li>lorem ipsum dolor sit amet</li>
+          </ul>
         </div>
-        <div class="captions">
-          <h1>You deserve our best service.</h1>
-          <h3>Leave worrying about presenting your product to us!</h3>
-          <h3>Websites or banners, we do it all!</h3>
-          <!-- Was gonna use a tag but button easier to style-->
-          <!-- simply redirect the user to shop.html will do -->
-          <button class="urge-action-btn hero-btn" onclick="location.href = './shop.html'">
-            <span>
-              Shop Now
-            </span>
-          </button>
+        <p>RM <span>XXX</span></p>
+        <div class="actions">
+          <button class="urge-action-btn product-buy-btn">Buy Now</button>
+          <p>Want one <a href="#">custom made</a>?<p>
         </div>
       </div>
     </div>
-    <div class="featured-products-container">
-      <h2>Featured Products</h2>
-      <div class="featured-product" onclick="location.href = './product_car_rental.html'">
-        <img src="../../res/car-rental-thumbnail.png" alt="Thumbnail">
-        <div class="desc">
-          <h3>Car Rental Website</h3>
-          <p>
-            Use this as a template for other product, or directly make it into use without having to change everything! It is already production ready!
-          </p>
+    <div class="product-key-features">
+      <h1>Key Features</h1>
+      <div class="key-features-container">
+        <div class="key-feature">
+          <img src="../../res/hackathon.png" alt="Feature preview" class="slide-in-left-initial slide-in">
+          <div class="feature-explanation slide-in-right-initial slide-in">
+            <h1>Page Function</h1>
+          </div>
+        </div>
+        <div class="key-feature">
+          <img src="../../res/hackathon.png" alt="Feature preview" class="slide-in-left-initial slide-in">
+          <div class="feature-explanation slide-in-right-initial slide-in">
+            <h1>Page Function</h1>
+          </div>
+        </div>
+        <div class="key-feature">
+          <img src="../../res/hackathon.png" alt="Feature preview" class="slide-in-left-initial slide-in">
+          <div class="feature-explanation slide-in-right-initial slide-in">
+            <h1>Page Function</h1>
+          </div>
         </div>
       </div>
-      <div class="featured-product" onclick="location.href = './product_help_center.html'">
-        <img src="../../res/hackathon.png" alt="Thumbnail">
-        <div class="desc">
-          <h3>Health Help Center</h3>
-          <p>
-            Use this as a ready-made template for health help center relavent projects! It has majority functions that most health help center requires! The best part is, this website is dynamic so you only need to change the texts to make one of your own version without worrying how to implement the functions yourself!
-          </p>
-        </div>
-      </div>
-      <!-- 
-        It should have almost the same styling as the button on top for consistency
-        Didn't provide span because I don't want the arrow animation
-        simply redirect to shop.html will do also
-      -->
-      <button class="urge-action-btn browse-more" onclick="location.href = './shop.html'">
-        View More
-      </button>
     </div>
   </main>
   <footer>
