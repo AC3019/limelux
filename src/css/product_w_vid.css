@@ -1,0 +1,114 @@
+.content-container {
+    margin: 15vh auto;
+    /* height: 80vh; */
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* align-items: center; */
+    gap: 3vw;
+}
+
+.product-vid video {
+    width: 100%;
+    height: auto;
+}
+
+.product-des {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.25em;
+}
+
+.product-des h1 {
+    margin-bottom: 3%;
+}
+
+.product-des p {
+    margin: 2% 0 1.5% 0;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.product-des ul {
+    margin-left: 2ch;
+}
+
+.product-buy-btn {
+    padding: 2% 2vw;
+}
+
+.product-des span,
+.product-des a {
+    color: #fc6471;
+}
+
+.product-des a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-key-features {
+    margin: 2vh auto;
+    /* height: 80vh; */
+    width: 90vw;
+    overflow-x: hidden; /* for the image and description to slide, in hide the ability to scroll */
+}
+
+.product-key-features h1 {
+    margin-bottom: 2vh;
+}
+
+.key-features-container {
+    padding: 0 2vw;
+}
+
+.key-feature {
+    display: flex;
+    justify-content: space-between;
+    margin: 4vh 0;
+}
+
+.key-feature:nth-of-type(2n) {
+    flex-direction: row-reverse;
+}
+
+.key-feature img {
+    width: 42vw;
+    height: auto;
+}
+
+.feature-explanation {
+    width: 42vw;
+    margin: auto auto;
+}
+
+.feature-explanation h1 {
+    margin: 0;
+    margin-left: 2vw;
+}
+
+.key-feature:nth-of-type(2n) .feature-explanation h1 {
+    margin: 0;
+    margin-right: 2vw;
+    text-align: right;
+}
+
+.slide-in {
+    opacity: 0;
+    transition: .7s;
+}
+
+.slide-in-left-initial {
+    transform: translateX(-65%);
+}
+
+.slide-in-right-initial {
+    transform: translateX(65%);
+}
+
+/* will use to override the slide-in-xx-initials*/
+.appear {
+    opacity: 1;
+    transform: translateX(0);
+}
