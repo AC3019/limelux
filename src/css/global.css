@@ -9,6 +9,7 @@ DONT CODE PAGE SPECIFIC STYLES HERE
   padding: 0;
   font-family: Roboto, sans-serif;
   color: #170506;
+  scroll-behavior: smooth; /* not supported in safari yet but its just fancy, no real influence */
 }
 
 header {
@@ -360,8 +361,10 @@ footer input[type="email"] {
   padding: 5px 10px;
 }
 
-input[type="text"]:focus, 
-input[type="email"]:focus {
+/* define box shadow to all input types except the submit button for consistency */
+input:not(input[type="submit"]):focus, 
+select:focus,
+textarea:focus {
   box-shadow: 0 2px 7.5px #3b2729;
 }
 
