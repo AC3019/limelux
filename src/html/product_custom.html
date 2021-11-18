@@ -6,10 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../css/shop.css">
+  <link rel="stylesheet" href="../css/product_custom.css">
   <script src="../js/global.js" defer></script>
-  <script src="../js/shop.js" defer></script>
-  <title>Limelux Products</title>
+  <title>Limelux Product - Health Help Center Website</title>
 </head>
 
 <body>
@@ -58,7 +57,7 @@
     <nav>
       <!-- An exception: change the active to where the user at -->
       <a href="index.html" class="nav-links">Home</a>
-      <a href="shop.html" class="nav-links active">Our Products</a>
+      <a href="shop.html" class="nav-links">Our Products</a>
       <a href="aboutUs.html" class="nav-links">About Us</a>
       <a href="contact.html" class="nav-links">Contact Us</a>
       <a id="music-toggle" class="music-off" title="Toggle Background Music" onclick="toggleMusic()"></a>
@@ -68,79 +67,75 @@
     <button id="goToTop" onclick="goToTop()"></button>
     <!-- SRSLY, DIFF FILES SHOULD JUST MODIFY THINGS THAT GO AFTER THIS LINE -->
     <div class="content-container">
-      <div class="side-nav">
-        <!-- will add onclick filter product function later -->
-        <h1 
-            class="filter"
-            data-filter-category="web"
-            onmouseenter="filterHovered(this)"
-            onmouseleave="filterHovered(this)"
-            onclick="filterCategory(this)">
-          Websites
-        </h1>
-        <h1 
-            class="filter"
-            data-filter-category="banner"
-            onmouseenter="filterHovered(this)"
-            onmouseleave="filterHovered(this)"
-            onclick="filterCategory(this)">
-          Banners
-        </h1>
-        <h1 
-            class="filter"
-            data-filter-category="null"
-            onmouseenter="filterHovered(this)"
-            onmouseleave="filterHovered(this)"
-            onclick="filterCategory(this)">
-          Coming Soon
-        </h1>
+      <div class="product-vid">
+        <img src="../../res/no-preview.png" alt="Preview isn't available for custom made products">
       </div>
-      <div class="product-categories">
-        <div class="category" id="web">
-          <h1>Websites</h1>
-          <div class="category-containers">
-            <!-- zhijie apply onclick function to this div can d, btn eh event will bubble up and will call dao this div eh function also eh -->
-            <div class="product" onclick="location.href = './product_car_rental.html'">
-              <img src="../../res/car-rental-thumbnail.png" alt="product image">
-              <div class="product-details">
-                <h2>Car Rental Website</h2>
-                <h4>RM <span class="price-highlight">XXX</span></h4>
-                <button class="urge-action-btn">Learn More</button>
-              </div>
-            </div>
-            <div class="product" onclick="location.href = './product_help_center.html'">
-              <img src="../../res/hackathon.png" alt="product image">
-              <div class="product-details">
-                <h2>Health Help Center</h2>
-                <h4>RM <span class="price-highlight">XXX</span></h4>
-                <button class="urge-action-btn">Learn More</button>
-              </div>
-            </div>
-            <div class="product" onclick="location.href='./product_custom.html'">
-              <img src="../../res/no-preview.png" alt="product image">
-              <div class="product-details">
-                <!-- simple hack to make the design consistent -->
-                <h2>Custom Made Website</h2>
-                <h4>RM <span class="price-highlight">100 - 500/page</span></h4>
-                <button class="urge-action-btn">Learn More</button>
-              </div>
-            </div>
-          </div>
+      <div class="product-des">
+        <h1>Custom Made Website/Banner</h1>
+        <div class="product-features">
+          <p>Simple Features</p>
+          <ul>
+            <li>lorem ipsum</li>
+            <li>lorem ipsum dolor</li>
+            <li>lorem ipsum dolor sit amet</li>
+          </ul>
         </div>
-        <div class="category" id="banner">
-          <h1>Banners</h1>
-          <div class="category-containers">
-            <div class="product" onclick="location.href='./product_custom.html'">
-              <img src="../../res/no-preview.png" alt="product image">
-              <div class="product-details">
-                <h2>Custom Made Banner</h2>
-                <h4>RM <span class="price-highlight">20 - 50/banner</span></h4>
-                <button class="urge-action-btn">Learn More</button>
-              </div>
-            </div>
-          </div>
+        <p>RM <span>XXX</span></p>
+        <div class="actions">
+          <button class="urge-action-btn product-buy-btn" onclick="location.href='#scroll-to-order-form'">Buy Now</button>
         </div>
       </div>
+    </div>
+    <div id="order-form">
+      <!-- empty div to let us locate the order form -->
+      <div id="scroll-to-order-form"></div>
+      <h1>Give Us Your Specifications</h1>
+      <form action="" method="POST" onsubmit="event.preventDefault()">
+        <!-- col-2 stands for 2 column layout -->
+        <div class="col-2">
+          <!-- col-2 stands for 2 column layout -->
+          <div class="row-2">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Your Name Here">
+          </div>
+          <div class="row-2">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="yourmail@example.com">
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="row-2">
+            <label for="productType">Product Type</label>
+            <select name="productType" id="productType">
+              <option value="website" selected>Website</option>
+              <option value="banner">Banner</option>
+            </select>
+          </div>
+          <div class="row-2">
+            <label for="pagesNeeded">Pages Needed (Approx.)</label>
+            <input type="number" name="pagesNeeded" id="pagesNeeded" min="1" max="30" value="1">
+          </div>
+        </div>
+        <div class="row-2 full-width">
+          <label for="extraInfo">Theme and Design Thoughts</label>
+          <textarea 
+            name="extraInfo" 
+            id="extraInfo" 
+            cols="30" 
+            rows="10" 
+            placeholder="Type your message here"
+          ></textarea>
+        </div>
+        <h3>
+          We’ll get back to you once you placed order to confirm more things with you, please be patient, thank you!
+        </h3>
+        <h3>
+          Have other resources for us to use? 
+          Email them along your order ID (which will be given after you placed order) to <span>designresources@limelux.com</span>
+        </h3>
+
+        <input type="submit" value="Buy Now" class="product-buy-btn urge-action-btn">
+      </form>
     </div>
   </main>
   <footer>

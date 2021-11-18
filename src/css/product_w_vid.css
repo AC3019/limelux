@@ -11,6 +11,7 @@
 .product-vid video {
     width: 100%;
     height: auto;
+    box-shadow: 0 0 10px #3b3b3b;
 }
 
 .product-des {
@@ -76,6 +77,7 @@
 .key-feature img {
     width: 42vw;
     height: auto;
+    box-shadow: 0 0 10px #3b3b3b;
 }
 
 .feature-explanation {
