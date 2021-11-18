@@ -10,6 +10,7 @@ const featProducts = document.querySelectorAll('.featured-product')
 // if the browser have intersectionobserver and isIntersecting function is accepted
 // PS can actually extract this into a function but for small project like this it's not necessary
 if ('IntersectionObserver' in window && 
+    'IntersectionObserverEntry' in window &&
     'isIntersecting' in window.IntersectionObserverEntry.prototype) {
 
     const fadeInOptions = {
