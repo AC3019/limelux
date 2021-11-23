@@ -21,6 +21,7 @@ table{
 
 th {
     text-align: left;
+    background-color: #FC6471;
 }
 
 tr, td, th{
@@ -36,4 +37,13 @@ th:first-child, td:first-child {
 table, tr, td, th{
     border: solid 2px black;
     border-collapse: collapse;
+}
+
+.img{
+    margin-top: 2%;
+    height: 55vh;
+    width: 100%;
+    background-image: url("../../res/horizontal\(team\).jpg");
+    background-size: 100%;
+    
 }
