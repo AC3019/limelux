@@ -1,6 +1,9 @@
 # limelux
 LimeLux is a group assignment in our Intro to Web Development course in TARC foundation (YR2021)
 
+## Go to the website:
+[Click here to go to the website](https://hoshisorakangetsu.github.io/limelux/src/html/)
+
 ## Assignment Details
 We are required to
 - Not use any website builders
