@@ -37,8 +37,8 @@ function retrieveFromFeedbackForm() {
   }
   const userInfo = JSON.parse(localStorage.getItem('userInfo'))
 
-  const nameElem = document.getElementById('name')
-  const emailElem = document.getElementById('email')
+  const nameElem = document.getElementById('name-feedback')
+  const emailElem = document.getElementById('email-feedback')
   const messageElem = document.getElementById('message')
 
   nameElem.value = userInfo.name
