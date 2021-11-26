@@ -15,13 +15,14 @@
   width: 8ch;
 }
 
-input, textarea {
+.feedback-area input, 
+.feedback-area textarea {
   border: 2px solid #FC6471;
   background-color: #eee;
   font-size: 1.1em;
 }
 
-input {
+.feedback-area input {
   padding: 5px 20px;
   /* no people's name and email will exceed 35 characters eh right? */
   width: 45ch;
@@ -29,7 +30,7 @@ input {
   border-radius: 5px;
 }
 
-textarea {
+.feedback-area textarea {
   width: 80%;
   padding: 1vh 1vw;
   border-radius: 8px;
