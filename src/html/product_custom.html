@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/product_custom.css">
   <script src="../js/global.js" defer></script>
+  <script src="../js/formHandle.js" defer></script>
   <title>Limelux Product - Health Help Center Website</title>
 </head>
 
@@ -73,14 +74,17 @@
       <div class="product-des">
         <h1>Custom Made Website/Banner</h1>
         <div class="product-features">
-          <p>Simple Features</p>
+          <p>We can: </p>
           <ul>
-            <li>lorem ipsum</li>
-            <li>lorem ipsum dolor</li>
-            <li>lorem ipsum dolor sit amet</li>
+            <li>Complete your design</li>
+            <li>Design into code (websites)</li>
+            <li>Design from the ground up for you</li>
           </ul>
         </div>
-        <p>RM <span>XXX</span></p>
+        <div class="price-list">
+          <p>RM <span>100 - 500 / Website page</span></p>
+          <p>RM <span>20 - 50 / Banner</span></p>
+        </div>
         <div class="actions">
           <button class="urge-action-btn product-buy-btn" onclick="location.href='#scroll-to-order-form'">Buy Now</button>
         </div>
@@ -90,7 +94,7 @@
       <!-- empty div to let us locate the order form -->
       <div id="scroll-to-order-form"></div>
       <h1>Give Us Your Specifications</h1>
-      <form action="" method="POST" onsubmit="event.preventDefault()">
+      <form action="" method="POST" onsubmit="event.preventDefault(); addToFeedbackForm()">
         <!-- col-2 stands for 2 column layout -->
         <div class="col-2">
           <!-- col-2 stands for 2 column layout -->
