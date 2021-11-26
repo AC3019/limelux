@@ -26,7 +26,7 @@
 }
 
 .product-des p {
-    margin: 2% 0 1.5% 0;
+    /* margin: 2% 0 1.5% 0; */
     font-weight: bold;
     font-size: 1.1em;
 }
@@ -39,15 +39,11 @@
     padding: 2% 2vw;
 }
 
-.product-des span,
-.product-des a {
+.product-des span {
     color: #fc6471;
 }
 
-.product-des a {
-    text-decoration: none;
-    cursor: pointer;
-}
+/* .price-list */
 
 #order-form {
     width: 70vw;
