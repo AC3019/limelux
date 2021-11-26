@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/contact.css">
   <script src="../js/global.js" defer></script>
+  <script src="../js/formHandle.js" defer></script>
   <title>LimeLux Contact Us</title>
 </head>
 
@@ -78,16 +79,28 @@
         <div class="form">
           <h3>Send us a message!</h3>
           <p>We’ll respond within 24 hours on working days.</p>
-          <form action="" method="POST">
+          <form action="" method="POST" onsubmit="event.preventDefault(); addToFeedbackForm('contact')">
             <!--use div to split into side by side-->
             <div class="input">
               <div class="name">
                 <label for="name">Full Name:</label>
-                <input type="text" id="name" class="NameIpt" placeholder="Your name here" required>
+                <input 
+                  type="text"
+                  name="name" 
+                  id="name" 
+                  class="NameIpt" 
+                  placeholder="Your name here" 
+                  required>
               </div>
               <div class="email">
                 <label for="email">Email:</label>
-                <input type="email" id="email" class="EmailIpt" placeholder="yourmail@example.com" required>
+                <input 
+                  type="email"
+                  name="email" 
+                  id="email" 
+                  class="EmailIpt" 
+                  placeholder="yourmail@example.com" 
+                  required>
               </div>
             </div>
             <label for="message">Enter your message here</label>

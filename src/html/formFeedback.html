@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../css/product_custom.css">
+  <link rel="stylesheet" href="../css/formFeedback.css">
   <script src="../js/global.js" defer></script>
-  <script src="../js/formHandle.js" defer></script>
-  <title>Limelux Product - Health Help Center Website</title>
+  <script src="../js/formHandle.js"></script>
+  <title>LimeLux - Thank you!!!</title>
 </head>
 
-<body>
+<body onload="retrieveFromFeedbackForm()">
   <!-- 
     This file is supposed to be the landing page and the template for all other pages
     DO NOT CHANGE ANYTHING BESIDES THE CONTENTS INSIDE <main>
@@ -60,86 +60,38 @@
       <a href="index.html" class="nav-links">Home</a>
       <a href="shop.html" class="nav-links">Our Products</a>
       <a href="aboutUs.html" class="nav-links">About Us</a>
-      <a href="contact.html" class="nav-links">Contact Us</a>
+      <a href="contact.html" class="nav-links active">Contact Us</a>
       <a id="music-toggle" class="music-off" title="Toggle Background Music" onclick="toggleMusic()"></a>
     </nav>
   </header>
   <main>
     <button id="goToTop" onclick="goToTop()"></button>
     <!-- SRSLY, DIFF FILES SHOULD JUST MODIFY THINGS THAT GO AFTER THIS LINE -->
-    <div class="content-container">
-      <div class="product-vid">
-        <img src="../../res/no-preview.png" alt="Preview isn't available for custom made products">
+    <div class="feedback-main">
+      <h1>Thank You!!!</h1>
+      <h3>Your message will be sent to our customer service, please wait patiently for the reply.</h3>
+      <div class="feedback-area">
+        <p>The information we received are as follows:</p>
+        <div class="short-info-container">
+          <label for="name">Name: </label>
+          <!-- Users shall not edit these, XXX is dummy value, user will not be able to see this -->
+          <input type="text" name="name" id="name" value="XXX" readonly>
+        </div>
+        <div class="short-info-container">
+          <label for="email">Email: </label>
+          <input type="text" name="email" id="email" value="XXX" readonly>
+        </div>
+        <label for="message">Your message: </label>
+        <br>
+        <textarea 
+          name="message" 
+          id="message" 
+          cols="30" 
+          rows="14" 
+          placeholder="Type your message here"
+          readonly>User message goes here</textarea>
       </div>
-      <div class="product-des">
-        <h1>Custom Made Website/Banner</h1>
-        <div class="product-features">
-          <p>We can: </p>
-          <ul>
-            <li>Complete your design</li>
-            <li>Design into code (websites)</li>
-            <li>Design from the ground up for you</li>
-          </ul>
-        </div>
-        <div class="price-list">
-          <p>RM <span>100 - 500 / Website page</span></p>
-          <p>RM <span>20 - 50 / Banner</span></p>
-        </div>
-        <div class="actions">
-          <button class="urge-action-btn product-buy-btn" onclick="location.href='#scroll-to-order-form'">Buy Now</button>
-        </div>
-      </div>
-    </div>
-    <div id="order-form">
-      <!-- empty div to let us locate the order form -->
-      <div id="scroll-to-order-form"></div>
-      <h1>Give Us Your Specifications</h1>
-      <form action="" method="POST" onsubmit="event.preventDefault(); addToFeedbackForm('custom')">
-        <!-- col-2 stands for 2 column layout -->
-        <div class="col-2">
-          <!-- col-2 stands for 2 column layout -->
-          <div class="row-2">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Your Name Here" required>
-          </div>
-          <div class="row-2">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="yourmail@example.com" required>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="row-2">
-            <label for="productType">Product Type</label>
-            <select name="productType" id="productType">
-              <option value="website" selected>Website</option>
-              <option value="banner">Banner</option>
-            </select>
-          </div>
-          <div class="row-2">
-            <label for="pagesNeeded">Pages Needed (Approx.)</label>
-            <input type="number" name="pagesNeeded" id="pagesNeeded" min="1" max="30" value="1">
-          </div>
-        </div>
-        <div class="row-2 full-width">
-          <label for="extraInfo">Theme and Design Thoughts</label>
-          <textarea 
-            name="extraInfo" 
-            id="extraInfo" 
-            cols="30" 
-            rows="10" 
-            placeholder="Type your message here"
-          ></textarea>
-        </div>
-        <h3>
-          We’ll get back to you once you placed order to confirm more things with you, please be patient, thank you!
-        </h3>
-        <h3>
-          Have other resources for us to use? 
-          Email them along your order ID (which will be given after you placed order) to <span>designresources@limelux.com</span>
-        </h3>
-
-        <input type="submit" value="Buy Now" class="product-buy-btn urge-action-btn">
-      </form>
+      <button class="urge-action-btn go-back-btn" onclick="history.back()">Go Back</button>
     </div>
   </main>
   <footer>
